@@ -1,0 +1,70 @@
+{
+  "name": "AAA Auto Glass Auckland",
+  "description": "Auckland windscreen and auto glass replacement specialists since 1989. Mobile service, OEM glass, 36+ insurance partners.",
+  "url": "https://www.aaaautoglass.co.nz",
+  "contact": {
+    "phone": "0800 757-985",
+    "email": "tiptopautonz@hotmail.com",
+    "address": "133 Pilkington Road, Panmure, Auckland 1072"
+  },
+  "tools": [
+    {
+      "name": "glass_enquiry",
+      "description": "Submit a windscreen or auto glass replacement enquiry to AAA Auto Glass Auckland. Use this to request a quote or book a mobile technician.",
+      "url": "https://www.aaaautoglass.co.nz/index.html#contact",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "description": "Customer full name" },
+          "phone": { "type": "string", "description": "Customer phone number" },
+          "email": { "type": "string", "description": "Customer email address" },
+          "vehicle": { "type": "string", "description": "Vehicle make, model and year e.g. Toyota RAV4 2022" },
+          "registration": { "type": "string", "description": "Vehicle registration number" },
+          "glass_type": {
+            "type": "string",
+            "enum": ["windscreen", "side", "rear", "sunroof", "unsure"],
+            "description": "Type of glass that needs replacing"
+          },
+          "insurance": {
+            "type": "string",
+            "enum": ["yes", "no", "unsure"],
+            "description": "Whether the customer is making an insurance claim"
+          },
+          "insurance_company": { "type": "string", "description": "Insurance company name if applicable" },
+          "notes": { "type": "string", "description": "Additional details such as suburb or best time to call" }
+        },
+        "required": ["name", "phone", "vehicle", "glass_type"]
+      }
+    },
+    {
+      "name": "find_make_page",
+      "description": "Find the AAA Auto Glass page for a specific vehicle make to see models covered and book a windscreen replacement.",
+      "url_template": "https://www.aaaautoglass.co.nz/makes/{slug}.html",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "make": { "type": "string", "description": "Vehicle make e.g. Toyota, BMW, Tesla" },
+          "slug": { "type": "string", "description": "URL slug e.g. toyota, bmw, mercedes-benz, range-rover" }
+        },
+        "required": ["slug"]
+      }
+    },
+    {
+      "name": "find_insurance_page",
+      "description": "Find the AAA Auto Glass page for a specific insurance company to understand the claims process.",
+      "url_template": "https://www.aaaautoglass.co.nz/insurance/{slug}.html",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "insurer": { "type": "string", "description": "Insurance company name" },
+          "slug": { "type": "string", "description": "URL slug e.g. aa-insurance, ami-insurance, state-insurance" }
+        },
+        "required": ["slug"]
+      }
+    }
+  ],
+  "services": ["Windscreen replacement","ADAS windscreen replacement","Side and rear glass replacement","Sunroof and roof glass replacement","Windscreen chip and crack repair","Insurance claim handling"],
+  "area_served": "Auckland, New Zealand",
+  "founded": "1989",
+  "languages": ["en"]
+}
