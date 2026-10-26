@@ -1,0 +1,7 @@
+# Nested pages request these hero URLs with a relative path. The files are not
+# in the repo (the live site returns 404). A 200 rewrite serves the real file
+# at the requested URL and does not shadow a file if one is added later.
+/areas/hero.png     /hero.png            200
+/makes/hero.png     /hero.png            200
+/services/hero.png  /hero.png            200
+/services-hero.png  /services-hero.webp  200
