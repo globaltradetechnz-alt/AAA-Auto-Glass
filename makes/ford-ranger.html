@@ -156,8 +156,14 @@ footer ul li a{color:rgba(255,255,255,.7);font-size:13px;transition:color .2s}
 footer ul li a:hover{color:#fff}
 footer ul li span{color:rgba(255,255,255,.7);font-size:13px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(255,255,255,.45)}
-.gen-block{margin-top:48px}.gen-block:first-of-type{margin-top:8px}
-.gen-block h2{border-left:5px solid var(--blue);padding-left:14px}
+.gen-block{margin-top:56px;border-radius:20px;overflow:hidden;background:var(--blue-light);border:2px solid #bfdbfe;box-shadow:0 2px 10px rgba(30,58,110,.08)}.gen-block:first-of-type{margin-top:8px}
+.gen-block.gen-alt{background:#f1f5f9;border-color:#cbd5e1}
+.section .gen-block h2{margin:0;padding:18px 28px;background:var(--navy);color:#fff;font-size:clamp(1.45rem,3vw,2rem);line-height:1.25}
+.gen-block.gen-alt h2{background:#334155}
+.gen-body{padding:24px 28px 28px}
+.gen-block .ws-identify{background:#fff}
+.ws-credit-bottom{margin-top:40px}
+@media(max-width:600px){.gen-block{margin-top:40px;border-radius:16px}.section .gen-block h2{padding:14px 16px}.gen-body{padding:16px 14px 18px}}
 .ws-identify a{color:var(--blue);font-weight:700}
 .ws-noimg{border-top:4px solid var(--blue)}
 .ws-identify{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:12px;padding:14px 18px;color:var(--text-mid);font-size:.93rem;margin-bottom:24px}
@@ -190,12 +196,13 @@ footer ul li span{color:rgba(255,255,255,.7);font-size:13px}
 <p>New Zealand&#x27;s top-selling ute. Ford Ranger windscreen replacement — camera glass specialists, mobile across Auckland.</p>
 </div></section>
 
-<!-- Ford Ranger windscreens by model generation (newest first). Each generation is a .gen-block with a .ws-grid of .ws-card items. To add a photo to a card, add an <img> as its first child and remove the ws-noimg class. -->
+<!-- Ford Ranger windscreens by model generation (newest first). Each generation is a .gen-block panel (h2 heading bar, then .gen-body) with a .ws-grid of .ws-card items. To add a photo to a card, add an <img> as its first child and remove the ws-noimg class. -->
 <div class="section section-alt" id="ford-ranger-windscreens"><div class="section-inner">
 <p class="section-label">Ford Ranger Windscreens by Model</p>
 
 <div class="gen-block" id="ford-ranger-2022-2026">
 <h2>Ford Ranger <span class="nw">2022-2026</span></h2>
+<div class="gen-body">
 <p class="ws-identify">Not sure which one you have? Call us on <a href="tel:0800757985">0800 757-985</a> with your year and what you can see behind the mirror, and we'll confirm the right windscreen for your Ranger.</p>
 <div class="ws-grid">
 <article class="ws-card" id="ford-ranger-2022-2026-type-c">
@@ -218,9 +225,11 @@ footer ul li span{color:rgba(255,255,255,.7);font-size:13px}
 </div></article>
 </div>
 </div>
+</div>
 
-<div class="gen-block" id="ford-ranger-2011-2022">
+<div class="gen-block gen-alt" id="ford-ranger-2011-2022">
 <h2>Ford Ranger <span class="nw">2011-2022</span></h2>
+<div class="gen-body">
 <p class="ws-identify">Not sure which type you have? Look at the black area behind your rear-view mirror from outside: plain glass, a rain sensor opening, or a forward camera. Tell us your year and what you see, or send us a photo, and we'll confirm the right windscreen.</p>
 <div class="ws-grid">
 <article class="ws-card" id="ford-ranger-2011-2022-type-g">
@@ -266,11 +275,12 @@ footer ul li span{color:rgba(255,255,255,.7);font-size:13px}
 <a href="tel:0800757985" class="btn btn-blue ws-btn">📞 Call 0800 757-985 about Type A</a>
 </div></article>
 </div>
-<p class="ws-credit">Windscreen illustrations are for identification only, not exact fitment drawings. Vehicle photos: Ford Ranger PX by OSX, public domain; 2015-2018 and 2018 Ford Ranger PX by EurovisionNim, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons, cropped and placed on a white background. Ford Ranger 2022-2026 photo: <a href="https://commons.wikimedia.org/wiki/File:2022_Ford_Ranger_XLT_Double-Cab_2.0L_Turbo_Hi-Rider.jpg" rel="noopener" target="_blank">Chanokchon</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>. Ford Ranger 2006-2011 photo: <a href="https://commons.wikimedia.org/wiki/File:Ford_Ranger_PK_2.5_Wildtrak_4x2_Cool_White_01.jpg" rel="noopener" target="_blank">Ethan Llamas</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>.</p>
+</div>
 </div>
 
 <div class="gen-block" id="ford-ranger-2006-2011">
 <h2>Ford Ranger <span class="nw">2006-2011</span></h2>
+<div class="gen-body">
 <p class="ws-identify">Not sure which one you have? Call us on <a href="tel:0800757985">0800 757-985</a> with your year and what you can see behind the mirror, and we'll confirm the right windscreen for your Ranger.</p>
 <div class="ws-grid">
 <article class="ws-card" id="ford-ranger-2006-2011-type-b">
@@ -287,6 +297,8 @@ footer ul li span{color:rgba(255,255,255,.7);font-size:13px}
 </div></article>
 </div>
 </div>
+</div>
+<p class="ws-credit ws-credit-bottom">Windscreen illustrations are for identification only, not exact fitment drawings. Vehicle photos: Ford Ranger PX by OSX, public domain; 2015-2018 and 2018 Ford Ranger PX by EurovisionNim, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons, cropped and placed on a white background. Ford Ranger 2022-2026 photo: <a href="https://commons.wikimedia.org/wiki/File:2022_Ford_Ranger_XLT_Double-Cab_2.0L_Turbo_Hi-Rider.jpg" rel="noopener" target="_blank">Chanokchon</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>. Ford Ranger 2006-2011 photo: <a href="https://commons.wikimedia.org/wiki/File:Ford_Ranger_PK_2.5_Wildtrak_4x2_Cool_White_01.jpg" rel="noopener" target="_blank">Ethan Llamas</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>.</p>
 </div></div>
 
 <div class="section"><div class="section-inner">
